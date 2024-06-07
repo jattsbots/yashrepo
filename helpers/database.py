@@ -72,12 +72,12 @@ async def deleteUser(uid):
 
 async def addUserRcloneConfig(cb: CallbackQuery, fileId):
     try:
-        await cb.message.edit("Adding file to DB")
+        await cb.message.edit("Aᴅᴅɪɴɢ ғɪʟᴇ ᴛᴏ DB")
         uid = cb.from_user.id
         Database.mergebot.rcloneData.insert_one({"_id": uid, "rcloneFileId": fileId})
     except Exception as err:
-        LOGGER.info("Updating rclone")
-        await cb.message.edit("Updating file in DB")
+        LOGGER.info("Uᴘᴅᴀᴛɪɴɢ ʀᴄʟᴏɴᴇ")
+        await cb.message.edit("Uᴘᴅᴀᴛɪɴɢ ғɪʟᴇ ɪɴ DB")
         uid = cb.from_user.id
         Database.mergebot.rcloneData.replace_one({"_id": uid}, {"rcloneFileId": fileId})
     await cb.message.edit("Done")

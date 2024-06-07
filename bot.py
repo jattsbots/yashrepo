@@ -71,7 +71,7 @@ mergeApp = MergeBot(
     bot_token=Config.BOT_TOKEN,
     workers=300,
     plugins=dict(root="plugins"),
-    app_version="5.0+yash-mergebot",
+    app_version="5.0+JotSidhu-mergebot",
 )
 
 

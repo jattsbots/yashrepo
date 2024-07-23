@@ -1,8 +1,7 @@
-from pyrogram import Client, filters
-from pyrogram.types import Message, CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
-from helper.database import db
-from pyromod.exceptions import ListenerTimeout
-from config import rkn
+from pyrogram import Client
+from pyrogram.types import Message
+from bot import mergeApp, LOGGER
+from config import Config
 
 TRUE = [[InlineKeyboardButton('ᴍᴇᴛᴀᴅᴀᴛᴀ ᴏɴ', callback_data='metadata_1'),
        InlineKeyboardButton('✅', callback_data='metadata_1')

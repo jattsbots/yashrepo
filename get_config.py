@@ -11,7 +11,7 @@ try:
     try:
         res = rget(CONFIG_FILE_URL)
         if res.status_code == 200:
-            with open('config.env', 'wb+') as f:
+            with open('config.py', 'wb+') as f:
                 f.write(res.content)
         else:
             LOGGER.error(f"Failed to download config.env {res.status_code}")
@@ -21,7 +21,7 @@ except Exception as e:
     LOGGER.error(e)
     pass
 load_dotenv(
-    "config.env",
+    "config.py",
     override=True,
 )
 # tired of redeploying :(

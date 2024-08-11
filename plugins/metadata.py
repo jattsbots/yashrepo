@@ -2,7 +2,7 @@ from pyrogram import Client
 from pyrogram.types import Message
 from bot import mergeApp, LOGGER
 from config import Config
-
+async def metadata(
 TRUE = [[InlineKeyboardButton('ᴍᴇᴛᴀᴅᴀᴛᴀ ᴏɴ', callback_data='metadata_1'),
        InlineKeyboardButton('✅', callback_data='metadata_1')
        ],[
@@ -10,7 +10,7 @@ TRUE = [[InlineKeyboardButton('ᴍᴇᴛᴀᴅᴀᴛᴀ ᴏɴ', callback_data='m
 FALSE = [[InlineKeyboardButton('ᴍᴇᴛᴀᴅᴀᴛᴀ ᴏғғ', callback_data='metadata_0'),
         InlineKeyboardButton('❌', callback_data='metadata_0')
        ],[
-       InlineKeyboardButton('Sᴇᴛ Cᴜsᴛᴏᴍ Mᴇᴛᴀᴅᴀᴛᴀ', callback_data='cutom_metadata')]]
+       InlineKeyboardButton('Sᴇᴛ Cᴜsᴛᴏᴍ Mᴇᴛᴀᴅᴀᴛᴀ', callback_data='cutom_metadata')]])
 
 @Client.on_message(filters.private & filters.command('metadata'))
 async def handle_metadata(bot: Client, message: Message):

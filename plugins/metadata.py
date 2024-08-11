@@ -3,7 +3,7 @@ from pyrogram.types import Message
 from bot import mergeApp, LOGGER
 from config import Config
 
-TRUE = [[InlineKeyboardButton('ᴍᴇᴛᴀᴅᴀᴛᴀ ᴏɴ', callback_data='metadata'),
+TRUE = [[InlineKeyboardButton('ᴍᴇᴛᴀᴅᴀᴛᴀ ᴏɴ', callback_data='metadata_1'),
        InlineKeyboardButton('✅', callback_data='metadata_1')
        ],[
        InlineKeyboardButton('Sᴇᴛ Cᴜsᴛᴏᴍ Mᴇᴛᴀᴅᴀᴛᴀ', callback_data='cutom_metadata')]]

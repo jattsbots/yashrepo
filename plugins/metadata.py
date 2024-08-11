@@ -12,16 +12,6 @@ async def handle_metadata(bot: Client, message: Message):
         return await m.edit(f"Your Current Metadata:-\n\n➜ `{user_metadata}` ", reply_markup=InlineKeyboardMarkup(TRUE))
     return await m.edit(f"Your Current Metadata:-\n\n➜ `{user_metadata}` ", reply_markup=InlineKeyboardMarkup(FALSE))
 
-async def metadata(
-TRUE = [[InlineKeyboardButton('ᴍᴇᴛᴀᴅᴀᴛᴀ ᴏɴ', callback_data='metadata_1'),
-       InlineKeyboardButton('✅', callback_data='metadata_1')
-       ],[
-       InlineKeyboardButton('Sᴇᴛ Cᴜsᴛᴏᴍ Mᴇᴛᴀᴅᴀᴛᴀ', callback_data='cutom_metadata')]]
-FALSE = [[InlineKeyboardButton('ᴍᴇᴛᴀᴅᴀᴛᴀ ᴏғғ', callback_data='metadata_0'),
-        InlineKeyboardButton('❌', callback_data='metadata_0')
-       ],[
-       InlineKeyboardButton('Sᴇᴛ Cᴜsᴛᴏᴍ Mᴇᴛᴀᴅᴀᴛᴀ', callback_data='cutom_metadata')]])
-
 @Client.on_callback_query(filters.regex('.*?(custom_metadata|metadata).*?'))
 async def query_metadata(bot: Client, query: CallbackQuery):
     data = query.data

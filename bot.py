@@ -393,7 +393,7 @@ async def files_handler(c: Client, m: Message):
             return
 
 @Client.on_message(filters.command("setmetadata") & filters.private)
-async def set_metadata_command(client, msg):
+async def set_metadata_command(c: Client, m: Message):
     # Extract titles from the command message
     if len(msg.command) < 2:
         await msg.reply_text("Invalid command format. Use: setmetadata video_title | audio_title | subtitle_title")

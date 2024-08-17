@@ -394,9 +394,10 @@ async def files_handler(c: Client, m: Message):
 
 @mergeApp.on_message(filters.command(["nordbotz"]) & filters.private)
 async def set_metadata_command(c: Client, m: Message):
+    await m.reply_text(
     # Extract titles from the command message
     if len(msg.command) < 2:
-        await msg.reply_text("Invalid command format. Use: setmetadata video_title | audio_title | subtitle_title")
+        await msg.reply_text("Invalid command format. Use: setmetadata video_title | audio_title | subtitle_title"))
         return
     
     titles = msg.text.split(" ", 1)[1].split(" | ")

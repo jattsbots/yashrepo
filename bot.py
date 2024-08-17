@@ -392,7 +392,7 @@ async def files_handler(c: Client, m: Message):
             await m.reply("This Filetype is not valid")
             return
 
-@Client.on_message(filters.command("setmetadata") & filters.private)
+@mergeApp.on_message(filters.command(["nordbotz"]) & filters.private)
 async def set_metadata_command(c: Client, m: Message):
     # Extract titles from the command message
     if len(msg.command) < 2:

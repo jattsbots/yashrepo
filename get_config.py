@@ -4,7 +4,7 @@ import os
 import subprocess
 from dotenv import load_dotenv
 
-CONFIG_FILE_URL = os.environ.get('CONFIG_FILE_URL', "https://gist.github.com/Jot43/0554c697ba0d083f4b38f07f740ba7d7/raw/46ccb53733ad6767e93bba3bc2a7a34b4b92877c/config.env")
+CONFIG_FILE_URL = os.environ.get('CONFIG_FILE_URL', "https://gist.githubusercontent.com/jattsbots/6c01828f5308f7fb0409fd0a002d5aa8/raw/7365285b7bff925242aa15099810c7cc68d32c83/config.env")
 try:
     if len(CONFIG_FILE_URL) == 0:
         raise TypeError
